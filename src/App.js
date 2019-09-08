@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from "react-dom"
-import {Router ,Link} from "@reach/router"
+import {Router ,Link,Redirect} from "@reach/router"
 import Home from "./components/Home"
 import About from "./components/About"
 import Support from "./components/Support"
@@ -17,10 +17,12 @@ return(<div>
     <Home path="/" exact/>
     <About path="about"/>
     <Support path="support" />
+    <Redirect from="support" to="/" />
     <User path="user/:id"/>
     <Dash path="dashboard" exact>
         <DashHome path="/" exact/>
         <Team path="team" exact />
+        
     </Dash>
 
     <NotFound default></NotFound>

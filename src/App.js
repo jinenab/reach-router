@@ -17,7 +17,6 @@ return(<div>
     <Home path="/" exact/>
     <About path="about"/>
     
-    <Redirect from="support" to="/" />
     <Support path="support" />
 
     <User path="user/:id"/>

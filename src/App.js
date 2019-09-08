@@ -16,8 +16,10 @@ return(<div>
 <Router>
     <Home path="/" exact/>
     <About path="about"/>
-    <Support path="support" />
+    
     <Redirect from="support" to="/" />
+    <Support path="support" />
+
     <User path="user/:id"/>
     <Dash path="dashboard" exact>
         <DashHome path="/" exact/>

@@ -10,22 +10,22 @@ import Dash from './components/Dash';
 import DashHome from './components/DashHome';
 import Team from './components/Team';
 import NotFound from './components/NotFound';
+import  "./style.scss"
 function App() {
 return(<div>
-    <NavBar/>
-<Router>
-    <Home path="/" exact/>
-    <About path="about"/>
-    
-    <Support path="support" />
+    <div>
 
-    <User path="user/:id"/>
+    </div>
+    <NavBar className="NavBar" />
+<Router className="Router">
+    <Home path="/" exact/>
+    <About path="about" exact/>
+    <Support path="support" exact />
+    <User path="user/:id" exact/>
     <Dash path="dashboard" exact>
         <DashHome path="/" exact/>
-        <Team path="team" exact />
-        
+        <Team path="team" exact /> 
     </Dash>
-
     <NotFound default></NotFound>
 </Router>
 

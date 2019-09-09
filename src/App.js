@@ -17,17 +17,17 @@ return(<div>
 
     </div>
     <NavBar className="NavBar" />
-<Router className="Router">
-    <Home path="/" exact/>
-    <About path="about" exact/>
-    <Support path="support" exact />
-    <User path="user/:id" exact/>
-    <Dash path="dashboard" exact>
-        <DashHome path="/" exact/>
-        <Team path="team" exact /> 
-    </Dash>
-    <NotFound default></NotFound>
-</Router>
+    <Router className="Router">
+        <Home path="/" exact/>
+        <About path="about" exact/>
+        <Support path="support" exact />
+        <User path="user/:id" exact/>
+        <Dash path="dashboard" exact>
+            <DashHome path="/" exact/>
+            <Team path="team" exact /> 
+        </Dash>
+        <NotFound default></NotFound>
+    </Router>
 
 </div>)
       

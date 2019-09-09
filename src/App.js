@@ -27,7 +27,7 @@ return(<div>
         <About path="about" exact/>
         <Support path="support" exact />
         <User path="user/:id" exact/>
-        <Dash path="dashboard" exact>
+        <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
             <Team path="team" exact /> 
         </Dash>

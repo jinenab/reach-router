@@ -4,7 +4,7 @@ nav{
     flex-direction: column;
     width: 13%;
     height: 300px;
-    margin-top: 50px;
+    margin-top: 30px;
     position: fixed;
    div{
        display: column;
@@ -24,4 +24,12 @@ div{
   padding: 0;
 }
    }
+}
+
+.NavBar
+{ display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0d0;
+height: 50px;
+margin: 0;
 }

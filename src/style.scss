@@ -25,14 +25,23 @@ div{
 }
    }
 }
-
-.NavBar
-{ display: flex;
-  flex-direction: row;
+.Navbarcontainer
+{display: flex;
   background-color: #f0f0f0d0;
+
+div {
+  margin-top: 15px;
+  margin-left:1070px;
+flex-direction: row;
+ }
+  .NavBar
+{ 
+  display: flex;
+  flex-direction: row;
 height: 50px;
 margin: 0;
-a{
-  margin: 15px;
+div{
+  margin: 15px
+}
 }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Match} from "@reach/router"
-function User(props){
+function User(){
 return(<div>
    <Match path="/user/:id">
 {

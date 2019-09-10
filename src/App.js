@@ -29,7 +29,7 @@ return(<div>
         <User path="user/:id" exact/>
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
-            <Team path="team" exact /> 
+            <Team path="team/*" exact /> 
 
         </Dash>
         <NotFound default></NotFound>

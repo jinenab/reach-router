@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from "react-dom"
-import {Router ,Link,Redirect} from "@reach/router"
+import {Router ,Link,Redirect,Match} from "@reach/router"
 import Home from "./components/Home"
 import HomeNav from "./components/HomeNav"
 import About from "./components/About"
@@ -30,6 +30,7 @@ return(<div>
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
             <Team path="team" exact /> 
+
         </Dash>
         <NotFound default></NotFound>
     </Router>

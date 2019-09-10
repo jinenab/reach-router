@@ -1,14 +1,15 @@
 import React from "react"
 import {Link} from "@reach/router"
-function NavBar(){
+function NavBar(props){
     return(    <div>
-        <nav>
+        {/* <nav>
             
             <div><Link to="/">Home</Link> </div>
             <div><Link to="about"> About</Link> </div>
             <div><Link to="support"> Support</Link></div>
         </nav>
-        <br></br>
+        <br></br> */}
+        {props.children}
     </div>)
 }
 export default NavBar

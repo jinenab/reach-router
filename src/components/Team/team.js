@@ -1,6 +1,5 @@
 import React from "react"
 import {Match,Link} from "@reach/router"
-import Home from "../Home"
 function Team(){
     return(<div>
 

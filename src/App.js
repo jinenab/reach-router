@@ -1,6 +1,5 @@
 import React from 'react';
-import {render} from "react-dom"
-import {Router ,Link,Redirect,Match} from "@reach/router"
+import {Router ,Location} from "@reach/router"
 import Home from "./components/Home"
 import HomeNav from "./components/HomeNav"
 import About from "./components/About"
@@ -15,12 +14,21 @@ import NotFound from './components/NotFound';
 import  "./style.scss"
 function App() {
 return(<div>
-    
+
     <NavBar className="NavBar" >
-        <Router primary={false}>
+    <Location>
+  {props => 
+     props.location.pathname ==="/"?
+     (<HomeNav/>):(<DashboardNav/>)
+ }
+</Location>
+        {/* <Router primary={false}>
             <HomeNav path="/*" />
-            <DashboardNav path="dashboard/*" /> 
-        </Router>
+            <DashboardNav path="dashboard/*" />
+
+
+
+        </Router> */}
     </NavBar>
     <Router className="Router">
         <Home path="/" exact/>

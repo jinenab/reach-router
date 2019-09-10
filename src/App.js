@@ -30,7 +30,8 @@ return(<div>
         <Home path="/" exact/>
         <About path="about" exact/>
         <Support path="support" exact />
-        <User path="user/:id" exact/>
+        <User path="user"></User>
+        <User path="user/:id" exact />
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
             <Team path="team/*" exact /> 

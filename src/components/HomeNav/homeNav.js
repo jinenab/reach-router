@@ -7,6 +7,7 @@ function HomeNav(){
             <div><Link to="/">Home</Link> </div>
             <div><Link to="about"> About</Link> </div>
             <div><Link to="support"> Support</Link></div>
+            <div><Link to="user"> User</Link></div>
         </nav>
         <br></br>
     </div>)

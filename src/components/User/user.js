@@ -4,11 +4,9 @@ function User(){
 return(<div>
    <Match path="/user/:id">
 {
-props => props.match? (<div>I'am the user with id {props.match.id}</div>):(<div>No logged user</div>)
-}
-   </Match>
-  <br></br>
-    <Match path="/user/admin">
+props => props.match? (<div>I'am the user with id {props.match.id}
+<br></br>
+<Match path="/user/admin">
   {props =>
     props.match ? (
       <div>Cool you are the admin</div>
@@ -17,6 +15,11 @@ props => props.match? (<div>I'am the user with id {props.match.id}</div>):(<div>
     )
   }
 </Match>
+</div>):(<div>No logged user</div>)
+}
+   </Match>
+  <br></br>
+
 </div>)
 }
 export default User

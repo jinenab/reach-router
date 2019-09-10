@@ -19,8 +19,9 @@ return(<div>
     <SideBar  >
     <Location>
   {props => 
-     props.location.pathname ==="/"?
-     (<HomeNav/>):(<DashboardNav/>)
+ // console.log(props.location)
+    props.location.pathname.search("dashboard") ===1?
+ <DashboardNav/>: <HomeNav/>
  }
 </Location>
 

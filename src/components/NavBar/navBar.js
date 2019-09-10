@@ -1,8 +1,11 @@
 import React from "react"
-function NavBar(props){
+import {Link} from "@reach/router"
+function NavBar(){
     return(    <div className="NavBar">
  
-        hello
+ <Link to="/">Home</Link>
+ <Link to="/dashboard">Dashboard</Link>
+
     </div>)
 }
 export default NavBar

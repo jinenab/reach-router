@@ -1,7 +1,19 @@
 import React from "react"
+import {Match} from "@reach/router"
 function Inovice(){
     return(<div>
-         This is Inovice page 123
-        </div>)
+        <Match path="/inovice/:id">
+{
+    props =>props.match?
+      ( <div>
+    
+    This is Inovice page number : {props.match.id}
+          </div>) : ""
+    
+    }  
+
+        </Match>
+
+      </div>)
 }
 export default Inovice

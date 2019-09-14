@@ -1,7 +1,20 @@
-import React from "react"
-function Inovices(){
-    return(<div>    
+import React, {Component} from "react"
+import { navigate } from "@reach/router"
+class Inovices extends Component{
+ state={
+     id:0,
+ }
+    render()
+  {    const createInovice=()=>{
+return {id:this.state.id+1}
+}
+      return(<div>    
          This is Inovices page
-    </div>)
+         <button value={this.state.id} onClick={async e => {
+                 const newInovice = await createInovice(e.target.value)
+            navigate(`inovice/${newInovice.id} `)
+                
+         }}>ADD</button>
+    </div>)}
 }
 export default Inovices

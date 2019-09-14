@@ -10,6 +10,8 @@ import Dash from './components/Dash';
 import DashboardNav from './components/DashboardNav';
 import DashHome from './components/DashHome';
 import Team from './components/Team';
+import Inovices from './components/Invoices'
+import Inovice from './components/Invoice'
 import NotFound from './components/NotFound';
 import  "./style.scss"
 import NavBar from './components/NavBar/navBar';
@@ -32,6 +34,9 @@ return(<div>
         <Support path="support" exact />
         <User path="user"></User>
         <User path="user/:id" exact />
+        <Inovices path="inovices" ></Inovices>
+        <Inovice path="inovice/:id" ></Inovice>
+
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
             <Team path="team/*" exact /> 

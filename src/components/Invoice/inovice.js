@@ -4,11 +4,13 @@ function Inovice(){
     return(<div>
         <Match path="/inovice/:id">
 {
-    props =>props.match?
+    props  =>
       ( <div>
     
     This is Inovice page number : {props.match.id}
-          </div>) : ""
+    <br></br>
+
+          </div>) 
     
     }  
 

@@ -13,8 +13,10 @@ import Team from './components/Team';
 import Inovices from './components/Invoices'
 import Inovice from './components/Invoice'
 import NotFound from './components/NotFound';
+import LearnRedux from './components/Redux';
+import NavBar from './components/NavBar';
+import Vanilla from './components/Vanilla'
 import  "./style.scss"
-import NavBar from './components/NavBar/navBar';
 function App() {
 return(<div>
 <NavBar></NavBar>
@@ -34,9 +36,12 @@ return(<div>
         <Support path="support" exact />
         <User path="user"></User>
         <User path="user/:id" exact />
-        <Inovices path="inovices" ></Inovices>
-        <Inovice path="inovice/:id" ></Inovice>
-
+        <Inovices path="inovices" exact ></Inovices>
+        <Inovice path="inovice/:id" exact ></Inovice>
+        <LearnRedux path="redux" exact>
+<Vanilla path="counter-vanilla" exact></Vanilla>
+       
+        </LearnRedux>
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
             <Team path="team/*" exact /> 

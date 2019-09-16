@@ -1,7 +1,7 @@
 import React,{Component} from "react"
-import { createStore } from 'redux'
+import { createStore ,} from 'redux'
+import{ connect }from "react-redux"
 import reducers from "../../reducers"
-import {INC} from "../../actions"
 class Vanilla extends Component{
     state={ Counter:0,
     }
@@ -11,13 +11,28 @@ class Vanilla extends Component{
     {    const store = createStore(reducers)
 
    return(<div>
-<h1>Vanilla-Counter : {this.state.Counter}
+<h1>Vanilla-Counter : {this.props.Counter}   
+{store.getState().vanilla.Counter}
 </h1> <br></br>
 
- <button onClick={()=>{console.log(store.getState())
-     store.dispatch(INC())}}>+</button>
+ <button onClick=
+ {this.props.INCR}>+</button>
  <button>-</button>
  <button>increment if odd</button>
  </div>)}
 }
-export default Vanilla
+const mapStateToProps = state => {
+    return {
+      Counter: state.Counter
+    };
+  };
+const mapDispachToProps=dispach=>{
+    return{
+        INCR:()=>dispach( {type:"INCREMENT"})
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispachToProps,
+    )(Vanilla);
+

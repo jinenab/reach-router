@@ -4,7 +4,8 @@ import {Provider} from "react-redux";
 import {createStore} from "redux"
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-ReactDOM.render(<App />, document.getElementById('root'));
+import reducers from './reducers';
+const store=createStore(reducers)
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 
 serviceWorker.unregister();

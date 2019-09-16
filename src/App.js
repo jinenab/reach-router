@@ -15,7 +15,7 @@ import Inovice from './components/Invoice'
 import NotFound from './components/NotFound';
 import LearnRedux from './components/Redux';
 import NavBar from './components/NavBar';
-import Vanilla from './components/Vanilla'
+import Vanilla from './components/Vanilla';
 import  "./style.scss"
 function App() {
 return(<div>
@@ -27,8 +27,8 @@ return(<div>
     props.location.pathname.search("dashboard") ===1?
  <DashboardNav/>: <HomeNav/>
  }
-</Location>
 
+</Location>
     </SideBar>
     <Router className="Router">
         <Home path="/" exact/>
@@ -38,22 +38,15 @@ return(<div>
         <User path="user/:id" exact />
         <Inovices path="inovices" exact ></Inovices>
         <Inovice path="inovice/:id" exact ></Inovice>
-        <LearnRedux path="redux" exact>
-<Vanilla path="counter-vanilla" exact></Vanilla>
-       
-        </LearnRedux>
+        <LearnRedux path="redux" exact >
+            <Vanilla path="counter/" exact />
+        </LearnRedux>   
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>
             <Team path="team/*" exact /> 
-
         </Dash>
         <NotFound default></NotFound>
     </Router>
-
 </div>)
-      
-
-
 }
-
 export default App;

@@ -1,2 +1,2 @@
-import LearnRedux from "./learnRedux"
+import LearnRedux from "./redux"
 export default LearnRedux

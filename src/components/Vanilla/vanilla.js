@@ -5,8 +5,9 @@ class Vanilla extends Component{
     render()
     {
    return(<div>
-Vanilla-Counter
- <br></br>
+<h1>Vanilla-Counter : {this.state.Counter}
+</h1> <br></br>
+
  <button onClick={()=>{}}>+</button>
  <button>-</button>
  <button>increment if odd</button>

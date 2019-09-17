@@ -1,38 +1,35 @@
 import React,{Component} from "react"
-import { createStore ,} from 'redux'
-import{ connect }from "react-redux"
+import {createStore} from "redux"
 import reducers from "../../reducers"
+import {INC} from "../../actions"
+import vanilla from "../../reducers/vanilla"
 class Vanilla extends Component{
-    state={ Counter:0,
-    }
+  state={
+Counter:0
+  }
+ INCREMENT=async()=>{
+  await  this.setState({Counter:createStore(vanilla).getState()})
+  }
+  render()
+    {   
+     const store=createStore(vanilla)
+      return(<div>
+                  <h1>Vanilla-Counter : {this.state.Counter}
+                    </h1> <br></br>
+                    <button  onClick={ ()=> 
+                    {
+                      store.dispatch(INC())
+                     
+                    console.log(store.getState())
+                     //this.INCREMENT()
+                    }
+                      
+                  }>+</button>
 
-
-    render()
-    {    const store = createStore(reducers)
-
-   return(<div>
-<h1>Vanilla-Counter : {this.props.Counter}   
-{store.getState().vanilla.Counter}
-</h1> <br></br>
-
- <button onClick=
- {this.props.INCR}>+</button>
- <button>-</button>
- <button>increment if odd</button>
- </div>)}
+                    <button  >-</button>
+                    <button>increment if odd</button>
+                    </div>)}
 }
-const mapStateToProps = state => {
-    return {
-      Counter: state.Counter
-    };
-  };
-const mapDispachToProps=dispach=>{
-    return{
-        INCR:()=>dispach( {type:"INCREMENT"})
-    }
-}
-export default connect(
-    mapStateToProps,
-    mapDispachToProps,
-    )(Vanilla);
+
+export default Vanilla;
 

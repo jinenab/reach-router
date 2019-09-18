@@ -15,7 +15,7 @@ import Inovice from './components/Invoice'
 import NotFound from './components/NotFound';
 import LearnRedux from './components/Redux';
 import NavBar from './components/NavBar';
-import Vanilla from './components/Vanilla';
+import Counter from './components/Counter';
 import  "./style.scss"
 function App() {
 return(<div>
@@ -39,7 +39,7 @@ return(<div>
         <Inovices path="inovices" exact ></Inovices>
         <Inovice path="inovice/:id" exact ></Inovice>
         <LearnRedux path="redux" exact >
-            <Vanilla path="counter/" exact />
+            <Counter path="counter/" exact />
         </LearnRedux>   
         <Dash className="Dash" path="dashboard" exact>
             <DashHome path="/" exact/>

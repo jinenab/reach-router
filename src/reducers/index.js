@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
-import vanilla from "./vanilla"
-const reducers=combineReducers({vanilla:vanilla})
-export default reducers
+import counter from "./counter"
+const reducers=combineReducers({counter:counter})
+export default reducers 
